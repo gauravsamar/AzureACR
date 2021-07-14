@@ -20,7 +20,7 @@ spec:
   selector:
     matchLabels:
       app: hello-python
-  replicas: 5
+  replicas: 3
   template:
     metadata:
       labels:
@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: hello-python:latest
-        imagePullPolicy: Never
+        image: hello_python_grpc_web:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
